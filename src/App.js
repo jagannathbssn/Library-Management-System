@@ -1,4 +1,3 @@
-// src/App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
@@ -10,14 +9,18 @@ import RetrieveBook from "./components/RetrieveBook";
 import UserInfo from "./components/UserInfo";
 import AddUser from "./components/AddUser";
 import RemoveUser from "./components/RemoveUser";
-import Footer from "./components/Footer";
+import Home from "./components/Home";
 
-const App = () => {
+import "./App.css";
+
+function App() {
   return (
     <Router>
-      <Navbar />
-      <div className="container">
+      <div className="App">
+        <Navbar />
         <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/add-book" element={<AddBook />} />
           <Route path="/remove-book" element={<RemoveBook />} />
           <Route path="/book-details" element={<BookDetails />} />
@@ -28,9 +31,8 @@ const App = () => {
           <Route path="/remove-user" element={<RemoveUser />} />
         </Routes>
       </div>
-      <Footer />
     </Router>
   );
-};
+}
 
 export default App;

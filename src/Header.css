@@ -1,0 +1,71 @@
+/* Header Styles */
+.header {
+  background-color: #6495ed;
+  color: #ffffff;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.header .logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 50%; /* Added circular shape */
+  object-fit: cover;
+}
+
+.header .title {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Responsive Styles */
+
+/* For screens smaller than 426px */
+@media (max-width: 425px) {
+  .header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .header .logo {
+    margin: 0 0 10px 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .header .title {
+    font-size: 20px;
+  }
+}
+
+/* For very small screens, smaller than 480px */
+@media (max-width: 480px) {
+  .header .logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .header .title {
+    font-size: 18px;
+  }
+}
+
+/* For screens 426px or wider, logo and title side by side */
+@media (min-width: 426px) {
+  .header .container {
+    flex-direction: row;
+    text-align: left;
+  }
+}
+
+h1 {
+  text-align: center;
+}
