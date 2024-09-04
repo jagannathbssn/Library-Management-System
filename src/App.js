@@ -1,4 +1,5 @@
 import React from "react";
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import AddBook from "./components/AddBook";
@@ -18,18 +19,20 @@ function App() {
     <Router>
       <div className="App">
         <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/add-book" element={<AddBook />} />
-          <Route path="/remove-book" element={<RemoveBook />} />
-          <Route path="/book-details" element={<BookDetails />} />
-          <Route path="/issue-book" element={<IssueBook />} />
-          <Route path="/retrieve-book" element={<RetrieveBook />} />
-          <Route path="/user-info" element={<UserInfo />} />
-          <Route path="/add-user" element={<AddUser />} />
-          <Route path="/remove-user" element={<RemoveUser />} />
-        </Routes>
+        <div className="content">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/add-book" element={<AddBook />} />
+            <Route path="/remove-book" element={<RemoveBook />} />
+            <Route path="/book-details" element={<BookDetails />} />
+            <Route path="/issue-book" element={<IssueBook />} />
+            <Route path="/retrieve-book" element={<RetrieveBook />} />
+            <Route path="/user-info" element={<UserInfo />} />
+            <Route path="/add-user" element={<AddUser />} />
+            <Route path="/remove-user" element={<RemoveUser />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );

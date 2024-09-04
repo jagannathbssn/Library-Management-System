@@ -51,3 +51,31 @@ footer {
   color: white;
   text-align: center;
 }
+
+/* Responsive Design for small screens */
+@media screen and (max-width: 431px) {
+  .App {
+    flex-direction: column;
+  }
+
+  .navbar {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+.content {
+  flex-grow: 1;
+  padding: 50px;
+  box-sizing: border-box;
+  background-color: #fff;
+  overflow-y: auto;
+}
