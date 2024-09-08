@@ -13,6 +13,7 @@ body {
 
 /* Navbar Styles */
 .navbar {
+  font-size: 20px;
   background-color: #333;
   color: white;
   padding: 20px;
@@ -78,4 +79,10 @@ footer {
   box-sizing: border-box;
   background-color: #fff;
   overflow-y: auto;
+}
+
+@media screen and (max-width: 431px) {
+  .navbar {
+    font-size: 15px;
+  }
 }

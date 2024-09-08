@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Card } from "antd-mobile"; // Assuming MIUI components are imported from antd-mobile
+import "./Home.css";
 
 function Home() {
   const [stats, setStats] = useState({
@@ -23,9 +25,15 @@ function Home() {
     <div className="container">
       <h2>Library Stats</h2>
       <div className="stats">
-        <p>Total Books: {stats.totalBooks}</p>
-        <p>Total Users: {stats.totalUsers}</p>
-        <p>Books Issued: {stats.booksIssued}</p>
+        <Card className="stat-card">
+          <p>Total Books: {stats.totalBooks}</p>
+        </Card>
+        <Card className="stat-card">
+          <p>Total Users: {stats.totalUsers}</p>
+        </Card>
+        <Card className="stat-card">
+          <p>Books Issued: {stats.booksIssued}</p>
+        </Card>
       </div>
     </div>
   );

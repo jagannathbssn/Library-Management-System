@@ -1,0 +1,91 @@
+/* Container Styles */
+.container {
+  margin-top: 20px;
+}
+
+/* Remove User Form Container Styles */
+.ru {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Header Styles */
+.ru-header {
+  text-align: center;
+  color: #dc3545; /* Bootstrap danger color */
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.ru form {
+  text-align: center;
+  color: #333;
+}
+
+.ru form .form-group {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.ru form label {
+  margin-bottom: 0.5rem;
+  color: #dc3545; /* Bootstrap danger color */
+  font-size: larger;
+}
+
+.ru form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: larger;
+}
+
+.ru form .btn {
+  padding: 10px 20px;
+  font-size: larger;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button Hover Styles */
+.ru form .btn:hover {
+  background-color: #c82333; /* Darker danger color */
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .ru form .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ru form label {
+    width: 150px;
+    margin-right: 20px;
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  .ru form input {
+    width: calc(100% - 150px);
+  }
+}
+
+/* Adjust button for screen width of 1440px */
+@media screen and (min-width: 1440px) {
+  .ru form .form-group.button-group {
+    justify-content: left;
+    margin-left: 300px;
+    padding: 12px 24px; /* Increase padding for larger screens */
+    font-size: larger; /* Adjust font size if needed */
+  }
+}

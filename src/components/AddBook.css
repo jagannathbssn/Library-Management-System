@@ -1,0 +1,74 @@
+.ab {
+  padding: 10px;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+.ab form .form-group {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.ab form label {
+  margin-bottom: 0.5rem;
+  color: #006d77;
+  font-size: larger;
+}
+
+.ab form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: larger;
+}
+
+@media screen and (min-width: 768px) {
+  .ab form .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .ab form label {
+    width: 150px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    text-align: right;
+  }
+
+  .ab form input {
+    width: calc(100% - 150px);
+  }
+}
+
+.ab form .form-group.button-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.ab form .btn {
+  padding: 10px 20px;
+  font-size: larger;
+  background-color: #006d77;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.ab form .btn:hover {
+  background-color: #004e5e;
+}
+
+/* Adjust button for screen width of 1440px */
+@media screen and (min-width: 1440px) {
+  .ab form .form-group.button-group {
+    justify-content: left;
+    margin-left: 300px;
+    padding: 12px 24px; /* Increase padding for larger screens */
+    font-size: larger; /* Adjust font size if needed */
+  }
+}

@@ -1,5 +1,5 @@
-// components/RemoveUser.js
 import React, { useState } from "react";
+import "./RemoveUser.css"; // Import the CSS for styling
 
 const RemoveUser = () => {
   const [userId, setUserId] = useState("");
@@ -12,22 +12,29 @@ const RemoveUser = () => {
 
   return (
     <div className="container mt-4">
-      <h2>Remove a User</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>User ID</label>
-          <input
-            type="text"
-            className="form-control"
-            value={userId}
-            onChange={(e) => setUserId(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit" className="btn btn-danger">
-          Remove User
-        </button>
-      </form>
+      <div className="ru">
+        <h2 className="ru-header">Remove a User</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="userId" className="ru-label">
+              User ID
+            </label>
+            <input
+              type="text"
+              id="userId"
+              className="form-control ru-input"
+              value={userId}
+              onChange={(e) => setUserId(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group button-group">
+            <button type="submit" className="btn btn-danger">
+              Remove User
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

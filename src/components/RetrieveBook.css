@@ -1,0 +1,91 @@
+/* Container Styles */
+.container {
+  margin-top: 20px;
+}
+
+/* Retrieve Book Form Styles */
+.retrieve-book-form {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Header Styles */
+.retrieve-book-header {
+  text-align: center;
+  color: #28a745; /* Bootstrap success color */
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.retrieve-book-form form {
+  text-align: center;
+  color: #333;
+}
+
+.retrieve-book-form .form-group {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.retrieve-book-form label {
+  margin-bottom: 0.5rem;
+  color: #28a745; /* Bootstrap success color */
+  font-size: larger;
+}
+
+.retrieve-book-form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: larger;
+}
+
+.retrieve-book-form .btn {
+  padding: 10px 20px;
+  font-size: larger;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button Hover Styles */
+.retrieve-book-form .btn:hover {
+  background-color: #218838; /* Darker success color */
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .retrieve-book-form .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .retrieve-book-form label {
+    width: 150px;
+    margin-right: 20px;
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  .retrieve-book-form input {
+    width: calc(100% - 150px);
+  }
+}
+
+/* Adjust button for screen width of 1440px */
+@media screen and (min-width: 1440px) {
+  .retrieve-book-form form .form-group.button-group {
+    justify-content: left;
+    margin-left: 300px;
+    padding: 12px 24px; /* Increase padding for larger screens */
+    font-size: larger; /* Adjust font size if needed */
+  }
+}

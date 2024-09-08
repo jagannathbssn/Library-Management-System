@@ -1,0 +1,91 @@
+/* Container Styles */
+.container {
+  margin-top: 20px;
+}
+
+/* Add User Form Container Styles */
+.add-user-form {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+/* Header Styles */
+.add-user-header {
+  text-align: center;
+  color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 20px;
+}
+
+/* Form Styles */
+.add-user-form form {
+  text-align: center;
+  color: #333;
+}
+
+.add-user-form .form-group {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.add-user-form label {
+  margin-bottom: 0.5rem;
+  color: #007bff; /* Bootstrap primary color */
+  font-size: larger;
+}
+
+.add-user-form input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: larger;
+}
+
+.add-user-form .btn {
+  padding: 10px 20px;
+  font-size: larger;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Button Hover Styles */
+.add-user-form .btn:hover {
+  background-color: #0056b3; /* Darker primary color */
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .add-user-form .form-group {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .add-user-form label {
+    width: 150px;
+    margin-right: 20px;
+    text-align: right;
+    margin-bottom: 0;
+  }
+
+  .add-user-form input {
+    width: calc(100% - 150px);
+  }
+}
+
+/* Adjust button for screen width of 1440px */
+@media screen and (min-width: 1440px) {
+  .add-user-form form .form-group.button-group {
+    justify-content: left;
+    margin-left: 300px;
+    padding: 12px 24px; /* Increase padding for larger screens */
+    font-size: larger; /* Adjust font size if needed */
+  }
+}

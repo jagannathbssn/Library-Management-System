@@ -1,0 +1,84 @@
+/* Container Styles */
+.container {
+  margin-top: 20px; /* Space above the container */
+}
+
+/* Issue Book Form Container Styles */
+.ib {
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  padding: 20px; /* Padding around the form */
+  background-color: #ffffff; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Form Styles */
+.ib form {
+  text-align: center; /* Center text in the form */
+  color: #333; /* Dark gray text color */
+}
+
+.ib form .form-group {
+  padding: 20px; /* Padding inside each form group */
+  display: flex;
+  flex-direction: column; /* Stack form elements vertically */
+  align-items: flex-start; /* Align items to the start of the container */
+  margin-bottom: 1rem; /* Space below each form group */
+}
+
+.ib form label {
+  margin-bottom: 0.5rem; /* Space below the label */
+  color: #007bff; /* Teal color for label text */
+  font-size: larger; /* Increase font size */
+}
+
+.ib form input {
+  width: 100%; /* Full width input field */
+  max-width: 400px; /* Limit the maximum width */
+  padding: 0.5rem; /* Padding inside the input field */
+  font-size: larger; /* Increase font size inside the input field */
+}
+
+.ib form .btn {
+  padding: 10px 20px; /* Padding inside the button */
+  font-size: larger; /* Increase font size of button text */
+  background-color: #007bff; /* Bootstrap primary color */
+  color: white; /* White text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Button Hover Styles */
+.ib form .btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media screen and (min-width: 768px) {
+  .ib form .form-group {
+    flex-direction: row; /* Align form elements horizontally */
+    align-items: center; /* Center items vertically */
+  }
+
+  .ib form label {
+    width: 150px; /* Fixed width for labels */
+    margin-right: 20px; /* Space to the right of the label */
+    text-align: right; /* Align text to the right */
+    margin-bottom: 0; /* Remove bottom margin */
+  }
+
+  .ib form input {
+    width: calc(100% - 150px); /* Adjust width based on label width */
+  }
+}
+
+/* Adjust button for screen width of 1440px */
+@media screen and (min-width: 1440px) {
+  .ib form .form-group.button-group {
+    justify-content: left;
+    margin-left: 300px;
+    padding: 12px 24px; /* Increase padding for larger screens */
+    font-size: larger; /* Adjust font size if needed */
+  }
+}

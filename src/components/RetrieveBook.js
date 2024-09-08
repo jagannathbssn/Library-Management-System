@@ -1,5 +1,5 @@
-// components/RetrieveBook.js
 import React, { useState } from "react";
+import "./RetrieveBook.css"; // Import CSS for styling
 
 const RetrieveBook = () => {
   const [userId, setUserId] = useState("");
@@ -13,32 +13,42 @@ const RetrieveBook = () => {
 
   return (
     <div className="container mt-4">
-      <h2>Retrieve a Book</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label>User ID</label>
-          <input
-            type="text"
-            className="form-control"
-            value={userId}
-            onChange={(e) => setUserId(e.target.value)}
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label>ISBN</label>
-          <input
-            type="text"
-            className="form-control"
-            value={isbn}
-            onChange={(e) => setIsbn(e.target.value)}
-            required
-          />
-        </div>
-        <button type="submit" className="btn btn-success">
-          Retrieve Book
-        </button>
-      </form>
+      <div className="retrieve-book-form">
+        <h2 className="retrieve-book-header">Retrieve a Book</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="userId" className="retrieve-book-label">
+              User ID
+            </label>
+            <input
+              type="text"
+              id="userId"
+              className="form-control retrieve-book-input"
+              value={userId}
+              onChange={(e) => setUserId(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="isbn" className="retrieve-book-label">
+              ISBN
+            </label>
+            <input
+              type="text"
+              id="isbn"
+              className="form-control retrieve-book-input"
+              value={isbn}
+              onChange={(e) => setIsbn(e.target.value)}
+              required
+            />
+          </div>
+          <div className="form-group button-group">
+            <button type="submit" className="btn btn-success">
+              Retrieve Book
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };
